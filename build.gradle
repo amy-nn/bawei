@@ -8,10 +8,32 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.0'
-        
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+    }
+}
+
+plugins {
+    id "calces.appconfig" version "1.0.11"
+}
+
+
+appConfig{
+    debugEnable true //调试支持
+    apps{
+        app{
+            modules ':user'
+        }
+    }
+
+    modules {
+        user{
+            name ":user"
+            applicationId "com.example.user"
+            mainActivity ".UserActivity"
+            isRunAlone false
+        }
     }
 }
 

@@ -5,9 +5,7 @@ import com.example.mvp_lib.service.RetrofitService;
 import com.example.mvp_lib.service.entity.LoginBean;
 import com.example.mvp_lib.service.entity.LoginResponseBean;
 import com.example.mvp_lib.service.entity.RegisterBean;
-
 import java.util.HashMap;
-
 import io.reactivex.Observable;
 
 
@@ -15,7 +13,6 @@ import io.reactivex.Observable;
  * 注册管理
  */
 public class RegisterManager {
-
 
     private RetrofitService retrofitService;
     private String baseUrl;

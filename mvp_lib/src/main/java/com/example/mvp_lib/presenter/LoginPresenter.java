@@ -8,7 +8,6 @@ import com.example.mvp_lib.service.entity.LoginResponseBean;
 import com.example.mvp_lib.service.manager.RegisterManager;
 import com.example.mvp_lib.view.LoginView;
 import com.example.mvp_lib.view.View;
-
 import java.util.HashMap;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
