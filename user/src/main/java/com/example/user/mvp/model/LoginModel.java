@@ -4,6 +4,7 @@ import com.example.lib_core.mvp.model.BaseModel;
 import com.example.lib_core.mvp.model.BaseObserver;
 import com.example.lib_core.mvp.model.RetrofitManager;
 import com.example.user.entity.UserBean;
+import com.example.user.entity.UserBean2;
 import com.example.user.mvp.contract.LoginContract;
 import com.google.gson.JsonObject;
 import java.util.HashMap;
@@ -19,15 +20,21 @@ public class LoginModel extends BaseModel implements LoginContract.LoginIModel {
     Retrofit retrofit;
 
     @Override
-    public void registUser(RequestBody data, BaseObserver<UserBean, LoginContract.LoginView> observer) {
+    public void registUser(RequestBody data, BaseObserver<UserBean2, LoginContract.LoginView> observer) {
 
-        retrofit = RetrofitManager.getManager().getRetrofit();
-        Observable<UserBean> observable = retrofit.create(LoginApi.class).regist(data);
+        if(retrofit == null)
+            retrofit = RetrofitManager.getManager().getRetrofit();
+        Observable<UserBean2> observable = retrofit.create(LoginApi.class).regist(data);
         request(observable,observer);
     }
 
     @Override
-    public void loginUser(HashMap<String, String> data, BaseObserver<UserBean, LoginContract.LoginView> observer) {
+    public void loginUser(RequestBody data, BaseObserver<UserBean2, LoginContract.LoginView> observer) {
 
+        if(retrofit == null)
+            retrofit = RetrofitManager.getManager().getRetrofit(); //获得retrofit对象
+
+        Observable<UserBean2> observable = retrofit.create(LoginApi.class).login(data);
+        request(observable,observer);
     }
 }

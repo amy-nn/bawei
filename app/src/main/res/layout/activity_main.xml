@@ -10,8 +10,7 @@
         android:id="@+id/homeFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_orange_dark">
-    </FrameLayout>
+        android:background="@color/colorWhite"></FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -63,6 +62,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/mineLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/loginLayout1"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:visibility="gone"
+    android:background="@color/colorTitleBar">
+    <TextView
+        android:id="@+id/welcomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi~欢迎来到马蜂窝"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlack"/>
+    <TextView
+        android:id="@+id/welcomText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原每一个旅行愿望得以达成"
+        android:paddingTop="10dp"
+        android:textSize="10sp"
+        android:layout_below="@+id/welcomText"/>
+
+    <Button
+        android:id="@+id/login_regist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录/注册"
+        android:layout_below="@+id/welcomText2"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/note_img_xiaofeng"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

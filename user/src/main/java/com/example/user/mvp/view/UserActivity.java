@@ -1,10 +1,10 @@
 package com.example.user.mvp.view;
 
+import android.content.SharedPreferences;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.alibaba.android.arouter.facade.annotation.Route;
 import com.example.lib_core.mvp.view.BaseActivity;
 import com.example.user.R;
@@ -45,7 +45,6 @@ public class UserActivity extends BaseActivity {
                 Toast.makeText(UserActivity.this, string, Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override
@@ -67,5 +66,13 @@ public class UserActivity extends BaseActivity {
     public void onRegist(View view) {
 
         loginPresenter.regist();
+    }
+
+    /**
+     * 登陆方法
+     * @param view
+     */
+    public void onLogin(View view){
+        loginPresenter.login();
     }
 }

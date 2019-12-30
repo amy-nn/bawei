@@ -34,5 +34,10 @@
         android:layout_height="wrap_content"
         android:text="注册"
         android:onClick="onRegist"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:onClick="onLogin"/>
 
 </LinearLayout>
